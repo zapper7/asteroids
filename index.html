@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Essential viewport settings for VR/Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>VR Asteroids (Quest 3)</title>
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Babylon.js Core Library -->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+
+    <!-- Babylon.js GUI Library (for UI elements) -->
+    <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+
+    <!-- Optional: Loaders for GLTF, etc. Uncomment if you add complex models later -->
+    <!-- <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script> -->
+
+    <!-- Basic styling directly in HTML to ensure canvas fills the page -->
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Ensure black background */
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            display: block; /* Prevents potential extra space below canvas */
+            touch-action: none; /* Prevents unwanted touch interactions */
+        }
+    </style>
+</head>
+<body>
+    <!-- The canvas element where Babylon.js will render the scene -->
+    <canvas id="renderCanvas"></canvas>
+
+    <!-- Load your game's JavaScript file *after* the BabylonJS libraries and the canvas element -->
+    <script src="game.js"></script>
+</body>
+</html>
